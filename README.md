@@ -17,7 +17,7 @@ Forked from Ice-Cirno/[HoshinoBot](https://github.com/Ice-Cirno/HoshinoBot)
 
 运行 酷Q，启用 CQHTTP插件，CQHTTP插件的配置文件填入以下配置：
 
-    ```json
+    ```
     {
         "use_http": false,
         "use_ws": false,
@@ -121,16 +121,16 @@ Mirai现在已经很稳定了。
 
 
 ```bash
-#若您的服务器是amd64构架
-mkdir mirai&&cd mirai&&wget -c http://t.imlxy.net:64724/mirai/MiraiOK/miraiOK_linux_amd64 && chmod +x miraiOK* && ./miraiOK*
-#若您的服务器不是amd64构架
-mkdir mirai&&cd mirai&&wget -c http://t.imlxy.net:64724/mirai/MiraiOK/miraiOK_linux_arm64 && chmod +x miraiOK* && ./miraiOK*
+ #若您的服务器是amd64构架
+ mkdir mirai&&cd mirai&&wget -c http://t.imlxy.net:64724/mirai/MiraiOK/miraiOK_linux_amd64 && chmod +x miraiOK* && ./miraiOK*
+ #若您的服务器不是amd64构架
+ mkdir mirai&&cd mirai&&wget -c http://t.imlxy.net:64724/mirai/MiraiOK/miraiOK_linux_arm64 && chmod +x miraiOK* && ./miraiOK*
 ```
 Ctrl+C退出MiraiOK后当前目录下应该生成了plugins文件夹和mirai的一些文件，接下来使用以下指令：
 
 ```bash
-#需要了解vim编辑器的用法
-cd plugins&&wget https://github.com/yyuueexxiinngg/cqhttp-mirai/releases/download/0.1.4/cqhttp-mirai-0.1.4-all.jar&&mkdir CQHTTPMirai&&cd CQHTTPMirai&&vim setting.yml
+ #需要了解vim编辑器的用法
+ cd plugins&&wget https://github.com/yyuueexxiinngg/cqhttp-mirai/releases/download/0.1.4/cqhttp-mirai-0.1.4-all.jar&&mkdir CQHTTPMirai&&cd CQHTTPMirai&&vim setting.yml
 ```
 
 在setting.yml里，填入以下配置
@@ -151,12 +151,12 @@ cd plugins&&wget https://github.com/yyuueexxiinngg/cqhttp-mirai/releases/downloa
 然后，
 
 ```bash
-#使用screen创建一个窗口
-screen -S mirai
-cd ~/mirai&&./miraiOK*
-# （mirai-console内）
-login 账号 密码
-#最后使用Ctrl+a,d挂起这个shell
+  #使用screen创建一个窗口
+  screen -S mirai
+  cd ~/mirai&&./miraiOK*
+  # （mirai-console内）
+  login 账号 密码
+  #最后使用Ctrl+a,d挂起这个shell
 ```
 克隆本仓库并安装依赖包
 
