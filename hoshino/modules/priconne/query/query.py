@@ -2,12 +2,12 @@ import itertools
 from hoshino import util, R, CommandSession
 from . import sv
 
-p1 = R.img('priconne/quick/r16-3-tw-0.png').cqcode
-p2 = R.img('priconne/quick/r16-3-tw-1.png').cqcode
-p4 = R.img('priconne/quick/r17-3-jp-1.png').cqcode
-p5 = R.img('priconne/quick/r17-3-jp-2.png').cqcode
-p6 = R.img('priconne/quick/r17-3-jp-3.png').cqcode
-p7 = R.img('priconne/quick/r8-3.jpg').cqcode
+p1 = R.img('priconne/quick/r16-5-tw-0.png').cqcode
+p2 = R.img('priconne/quick/r16-5-tw-1.png').cqcode
+p4 = R.img('priconne/quick/r17-5-jp-1.png').cqcode
+p5 = R.img('priconne/quick/r17-5-jp-2.png').cqcode
+p6 = R.img('priconne/quick/r17-5-jp-3.png').cqcode
+p7 = R.img('priconne/quick/brank.png').cqcode
 
 @sv.on_rex(r'^(\*?([日台国b])服?([前中后]*)卫?)?rank(表|推荐|指南)?$', normalize=True)
 async def rank_sheet(bot, ctx, match):
@@ -21,7 +21,7 @@ async def rank_sheet(bot, ctx, match):
         '\n※表格仅供参考，升r有风险，强化需谨慎',
     ]
     if is_jp:
-        msg.append('※不定期搬运自图中群号\n※图中广告为原作者推广，与本bot无关\nR17-3 rank表：')
+        msg.append('※不定期搬运自图中群号\n※图中广告为原作者推广，与本bot无关\nR17-5 rank表：')
         pos = match.group(3)
         if not pos or '前' in pos:
             msg.append(str(p4))
@@ -32,19 +32,25 @@ async def rank_sheet(bot, ctx, match):
         await bot.send(ctx, '\n'.join(msg), at_sender=True)
         await util.silence(ctx, 60)
     elif is_tw:
-        msg.append(f'※不定期搬运自漪夢奈特\n※油管有介绍视频及原文档\nR16-3 rank表：\n{p1}{p2}')
+        msg.append(f'※不定期搬运自漪夢奈特\n※油管有介绍视频及原文档\nR16-5 rank表：\n{p1}{p2}')
         await bot.send(ctx, '\n'.join(msg), at_sender=True)
         await util.silence(ctx, 60)
     elif is_cn:
-        await bot.send(ctx, '\n※B服当前仅开放至金装，r10前无需考虑卡rank\n※暂未发现公开的靠谱rank推荐表\n※装备强化消耗较多mana，如非前排建议不强化\n※关于卡r的原因可发送"bcr速查"研读【为何卡R卡星】一帖', at_sender=True)
-        # await bot.send(ctx, str(p7))
-        # await util.silence(ctx, 60)
+        await bot.send(ctx, '\n※※装备强化消耗较多mana，如非前排建议不强化\n不定期搬运\n实际升rank请按照会长要求~', at_sender=True)
+        await bot.send(ctx, str(R.img('priconne/quick/brank.png').cqcode))
+        await util.silence(ctx, 60)
 
 
 @sv.on_command('arena-database', aliases=('jjc', 'JJC', 'JJC作业', 'JJC作业网', 'JJC数据库', 'jjc作业', 'jjc作业网', 'jjc数据库', 'JJC作業', 'JJC作業網', 'JJC數據庫', 'jjc作業', 'jjc作業網', 'jjc數據庫'), only_to_me=False)
 async def say_arina_database(session):
     await session.send('公主连接Re:Dive 竞技场编成数据库\n日文：https://nomae.net/arenadb \n中文：https://pcrdfans.com/battle')
 
+GUERZHUANG = f'''
+{R.img('priconne/quick/孤儿装.png').cqcode}'''
+@sv.on_command('guerzhuang', aliases=('孤儿装', '孤儿'), only_to_me=False)
+async def guerzhuang(session:CommandSession):
+    await session.send(GUERZHUANG, at_sender=True)
+    await util.silence(session.ctx, 60)
 
 OTHER_KEYWORDS = '【日rank】【台rank】【b服rank】【jjc作业网】【黄骑充电表】【一个顶俩】'
 PCR_SITES = f'''
