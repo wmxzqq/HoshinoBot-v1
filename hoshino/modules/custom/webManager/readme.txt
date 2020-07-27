@@ -1,0 +1,3 @@
+按照hoshino添加模块方法添加该模块
+修改view.py里ip和密码
+私聊bot bot设置
