@@ -6,7 +6,7 @@ from nonebot import CommandSession, MessageSegment, get_bot
 from hoshino.util import silence, concat_pic, pic2b64, FreqLimiter
 from hoshino.service import Service, Privilege as Priv
 
-sv = Service('pcr-arena', manage_priv=Priv.SUPERUSER)
+sv = Service('pcr-arena', manage_priv=Priv.ADMIN)
 
 from ..chara import Chara
 from . import arena

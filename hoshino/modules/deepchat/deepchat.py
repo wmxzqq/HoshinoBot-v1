@@ -5,7 +5,7 @@ from nonebot import NoneBot
 from hoshino import util
 from hoshino.service import Service, Privilege
 
-sv = Service('deepchat', manage_priv=Privilege.SUPERUSER, enable_on_default=False, visible=False)
+sv = Service('deepchat', manage_priv=Privilege.ADMIN, enable_on_default=False, visible=False)
 
 api = util.load_config(__file__)['deepchat_api']
 

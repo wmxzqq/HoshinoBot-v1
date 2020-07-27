@@ -11,7 +11,7 @@ from hoshino.service import Service, Privilege as Priv
 async def say_hello(session):
     await session.send('はい！私はいつも貴方の側にいますよ！')
 
-sv = Service('chat', manage_priv=Priv.SUPERUSER, visible=False)
+sv = Service('chat', manage_priv=Priv.ADMIN, visible=False)
 
 @sv.on_command('沙雕机器人', aliases=('沙雕機器人',), only_to_me=False)
 async def say_sorry(session):

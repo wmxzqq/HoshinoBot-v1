@@ -5,7 +5,7 @@ import os
 from .data import Question
 from hoshino import Service, Privilege as Priv, CommandSession, aiorequests
 answers = {}
-sv = Service('QA-mirai')
+sv = Service('qa')
 qa_path = os.path.expanduser('~/.hoshino/QA')
 if not os.path.exists(qa_path):
     os.mkdir(qa_path)

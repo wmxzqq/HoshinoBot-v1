@@ -1,6 +1,6 @@
 from hoshino import Service, Privilege as Priv
 
-sv = Service('_help_', manage_priv=Priv.SUPERUSER, visible=False)
+sv = Service('_help_', manage_priv=Priv.ADMIN, visible=False)
 
 MANUAL = '''
 =====================

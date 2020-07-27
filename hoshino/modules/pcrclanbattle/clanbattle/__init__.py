@@ -10,7 +10,7 @@ from hoshino.res import R
 from .argparse import ArgParser
 from .exception import *
 
-sv = Service('clanbattle', manage_priv=Privilege.SUPERUSER, enable_on_default=True)
+sv = Service('clanbattle', manage_priv=Privilege.ADMIN, enable_on_default=True)
 SORRY = 'ごめんなさい！嘤嘤嘤(〒︿〒)'
 
 _registry:Dict[str, Tuple[Callable, ArgParser]] = {}
