@@ -10,10 +10,10 @@ Forked from Ice-Cirno/[HoshinoBot](https://github.com/Ice-Cirno/HoshinoBot)
 下载以下软件，notepad++和vscode二选一。
 安装Python时，请务必勾选add python 3.8 to PATH.
 
-    - Python 3.8：https://www.python.org/ftp/python/3.8.5/python-3.8.5.exe
-    - Git：https://github.com/git-for-windows/git/releases/download/v2.27.0.windows.1/Git-2.27.0-64-bit.exe
-    - Notepad++（可选）：https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v7.8.9/npp.7.8.9.Installer.x64.exe
-    - vscode(可选)：https://code.visualstudio.com/docs/?dv=win
+- Python 3.8：https://www.python.org/ftp/python/3.8.5/python-3.8.5.exe
+- Git：https://github.com/git-for-windows/git/releases/download/v2.27.0.windows.1/Git-2.27.0-64-bit.exe
+- Notepad++（可选）：https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v7.8.9/npp.7.8.9.Installer.x64.exe
+- vscode(可选)：https://code.visualstudio.com/docs/?dv=win
 
 运行 酷Q，启用 CQHTTP插件，CQHTTP插件的配置文件填入以下配置：
 
