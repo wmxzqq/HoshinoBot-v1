@@ -141,7 +141,7 @@ Ctrl+C退出MiraiOK后当前目录下应该生成了plugins文件夹和mirai的�
     enable: true
     postMessageFormat: string
     reverseHost: 127.0.0.1
-    reversePort: 8080
+    reversePort: 9222
     reversePath: /ws/
     accessToken: null
     reconnectInterval: 3000
